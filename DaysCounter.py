@@ -54,6 +54,8 @@ while a.lower() == "y":
 		PD=[int(i) for i in PD.split("/")]
 		if(dob[1] == 13 or PD[1] == 13):
 			print("Please enter a valid date")
+		elif dob[2] < PD[2]:
+			print("\nThe number of days the person is alive:", getDifference(dob, PD))
 		elif sum(dob) < sum(PD):
 			print("\nThe number of days the person is alive:", getDifference(dob, PD))
 		else:
